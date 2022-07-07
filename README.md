@@ -1,4 +1,4 @@
-# Semaphore demo CI pipeline using Go
+# Semaphore demo CI pipeline using Golang
 
 This is an example program and CI pipeline showing how to run a Go project on
 Semaphore 2.0.

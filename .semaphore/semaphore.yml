@@ -12,9 +12,3 @@ blocks:
           commands:
             - echo $SEMAPHORE_GIT_SHA
             - echo $SEMAPHORE_GIT_SHA
-after_pipeline:
-  task:
-    jobs:
-      - name: Publish Results
-        commands:
-          - test-results gen-pipeline-report
