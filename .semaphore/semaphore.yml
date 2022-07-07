@@ -11,4 +11,6 @@ blocks:
         - name: go get & build
           commands:
             - echo $SEMAPHORE_GIT_SHA
-            - echo $SEMAPHORE_GIT_SHA
+            - artifacts push project test_files/1_mb_text.txt
+            - artifacts push project test_files/10kb.txt
+            - artifacts push project test_files/10mb.txt
