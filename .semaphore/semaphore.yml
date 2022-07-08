@@ -14,6 +14,7 @@ blocks:
             - export DEPLOY_LIST=test.txt
             - echo $(ls)
             - cat test.txt
+            - rm -f values-staging.yml
             - export TO_DEPLOY=$(cat $DEPLOY_LIST | grep -v kafka)
             - echo $TO_DEPLOY
             - 'if [[ ! -z $TO_DEPLOY ]]; then TENANTS=$(for TENANT in $TO_DEPLOY; do grep -om1 $TENANT values-staging.yml; done); fi'
