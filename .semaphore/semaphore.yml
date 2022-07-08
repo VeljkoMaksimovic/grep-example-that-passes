@@ -12,5 +12,6 @@ blocks:
           commands:
             - export TAG=$(echo $SEMAPHORE_GIT_SHA | cut -c 1-7)
             - export TODEPLOY=test.txt
+            - ls
             - 'if [[ -e $TODEPLOY ]]; then echo 4; else echo 5; fi'
             - echo TENANTS
