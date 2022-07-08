@@ -14,4 +14,4 @@ blocks:
             - export TODEPLOY=test.txt
             - echo $(ls)
             - 'if [[ -e $TODEPLOY ]]; then TENANTS=$(for TENANT in $TO_DEPLOY; do grep -om1 $TENANT values-staging.yaml; done); fi'
-            - echo TENANTS
+            - echo $TENANTS
