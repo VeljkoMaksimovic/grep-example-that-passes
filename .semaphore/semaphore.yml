@@ -11,10 +11,12 @@ blocks:
         - name: go get & build
           commands:
             - checkout
-            - export TODEPLOY=test.txt
+            - export DEPLOY_LIST=test.txt
             - echo $(ls)
             - cat test.txt
             - rm -f values-staging.yml
             - touch values-staging.yml
+            - export TO_DEPLOY=$(cat $DEPLOY_LIST | grep -v kafka)
+            - echo $TO_DEPLOY
             - 'if [[ -e $TODEPLOY ]]; then TENANTS=$(for TENANT in $TO_DEPLOY; do grep -om1 $TENANT values-staging.yml; done); fi'
             - echo $TENANTS
