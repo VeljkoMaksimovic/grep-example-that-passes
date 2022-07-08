@@ -10,7 +10,7 @@ blocks:
       jobs:
         - name: go get & build
           commands:
-            - echo $SEMAPHORE_GIT_SHA
-            - artifacts push project test_files/1_mb_text.txt
-            - artifacts push project test_files/10kb.txt
-            - artifacts push project test_files/10mb.txt
+            - export TAG=$(echo $SEMAPHORE_GIT_SHA | cut -c 1-7)
+            - export TODEPLOY=test.txt
+            - if [[ -e $TODEPLOY ]]; then TENANTS=$(for TENANT in `cat $TODEPLOY | grep -v kafka`; do grep -om1 $TENANT values-staging.yaml; done); fi
+            - echo TENANTS
