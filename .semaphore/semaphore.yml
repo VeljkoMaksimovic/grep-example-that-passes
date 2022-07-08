@@ -12,5 +12,5 @@ blocks:
           commands:
             - export TAG=$(echo $SEMAPHORE_GIT_SHA | cut -c 1-7)
             - export TODEPLOY=test.txt
-            - if [[ -e $TODEPLOY ]]; then TENANTS=$(for TENANT in `cat $TODEPLOY | grep -v kafka`; do grep -om1 $TENANT values-staging.yaml; done); fi
+            - 'if [[ -e $TODEPLOY ]]; echo 4; fi'
             - echo TENANTS
