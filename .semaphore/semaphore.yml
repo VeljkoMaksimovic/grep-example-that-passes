@@ -14,7 +14,7 @@ blocks:
             - export TODEPLOY=test.txt
             - echo $(ls)
             - cat test.txt
-            - rm -y values-staging.yml
+            - rm -f values-staging.yml
             - touch values-staging.yml
             - 'if [[ -e $TODEPLOY ]]; then TENANTS=$(for TENANT in $TO_DEPLOY; do grep -om1 $TENANT values-staging.yml; done); fi'
             - echo $TENANTS
