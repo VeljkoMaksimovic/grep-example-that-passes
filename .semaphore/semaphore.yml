@@ -8,7 +8,7 @@ blocks:
   - name: Build project
     task:
       jobs:
-        - name: go get & build
+        - name: Grep command passes
           commands:
             - checkout
             - export DEPLOY_LIST=test.txt
