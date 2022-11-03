@@ -5,7 +5,7 @@ agent:
     type: e1-standard-2
     os_image: ubuntu2004
 blocks:
-  - name: 'Build project ${{parameters.SEMAPHORE_GIT_WORKING_BRANCH}}'
+  - name: '${{parameters.SEMAPHORE_GIT_WORKING_BRANCH}}'
     task:
       jobs:
         - name: Grep command passes
