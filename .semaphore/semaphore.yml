@@ -10,12 +10,4 @@ blocks:
       jobs:
         - name: Grep command passes
           commands:
-            - checkout
-            - export DEPLOY_LIST=test.txt
-            - echo $(ls)
-            - cat test.txt
-            - cat values-staging.yml
-            - export TO_DEPLOY=$(cat $DEPLOY_LIST | grep -v kafka)
-            - echo $TO_DEPLOY
-            - 'if [[ ! -z $TO_DEPLOY ]]; then TENANTS=$(for TENANT in $TO_DEPLOY; do grep -om1 $TENANT values-staging.yml; done); fi'
-            - echo $TENANTS
+            - echo $SEMAPHORE_GIT_WORKING_BRANCH
