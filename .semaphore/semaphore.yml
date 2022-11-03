@@ -1,11 +1,11 @@
 version: v1.0
-name: '${{parameters.SEMAPHORE_GIT_WORKING_BRANCH}}'
+name: 'Build on ${{parameters.SEMAPHORE_GIT_WORKING_BRANCH}}'
 agent:
   machine:
     type: e1-standard-2
     os_image: ubuntu2004
 blocks:
-  - name: '${{parameters.SEMAPHORE_GIT_WORKING_BRANCH}}'
+  - name: Dummy block
     task:
       jobs:
         - name: Grep command passes
