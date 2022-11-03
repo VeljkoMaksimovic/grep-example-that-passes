@@ -1,5 +1,5 @@
 version: v1.0
-name: Semaphore Go CI example
+name: $SEMAPHORE_GIT_WORKING_BRANCH
 agent:
   machine:
     type: e1-standard-2
