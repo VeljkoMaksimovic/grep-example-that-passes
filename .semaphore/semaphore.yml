@@ -12,3 +12,6 @@ blocks:
           commands:
             - echo $SEMAPHORE_GIT_WORKING_BRANCH
             - echo $SEMAPHORE_GIT_PR_BRANCH
+promotions:
+  - name: Promote
+    pipeline_file: pipeline_3.yml
