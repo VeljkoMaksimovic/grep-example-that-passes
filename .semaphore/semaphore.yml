@@ -1,5 +1,5 @@
 version: v1.0
-name: 'Build on ${{parameters.SEMAPHORE_GIT_WORKING_BRANCH}}'
+name: 'Build on ${{parameters.SEMAPHORE_GIT_BRANCH}} ${{parameters.SEMAPHORE_GIT_PR_BRANCH}} '
 agent:
   machine:
     type: e1-standard-2
