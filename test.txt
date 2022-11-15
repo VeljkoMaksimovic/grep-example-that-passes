@@ -1,4 +1,3 @@
-sales-demo
 kafka
 moriarty
 globe
