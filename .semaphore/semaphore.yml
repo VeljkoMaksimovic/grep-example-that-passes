@@ -2,7 +2,7 @@ version: v1.0
 name: 'Build on ${{parameters.SEMAPHORE_GIT_BRANCH}} ${{parameters.SEMAPHORE_GIT_PR_BRANCH}} '
 agent:
   machine:
-    type: e1-standard-4
+    type: e1-standard-2
     os_image: ubuntu2004
 blocks:
   - name: Dummy block
@@ -11,7 +11,6 @@ blocks:
         - name: Grep command passes
           commands:
             - echo $SEMAPHORE_GIT_WORKING_BRANCH
-            - echo $SEMAPHORE_GIT_PR_BRANCH
 promotions:
   - name: Promote
     pipeline_file: pipeline_3.yml
