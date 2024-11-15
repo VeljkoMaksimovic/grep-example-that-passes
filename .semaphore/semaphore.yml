@@ -11,6 +11,3 @@ blocks:
         - name: Grep command passes
           commands:
             - echo $SEMAPHORE_GIT_WORKING_BRANCH
-promotions:
-  - name: Promote
-    pipeline_file: pipeline_3.yml
