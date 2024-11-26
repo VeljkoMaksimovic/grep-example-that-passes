@@ -2,8 +2,7 @@ version: v1.0
 name: 'Build on ${{parameters.SEMAPHORE_GIT_BRANCH}} ${{parameters.SEMAPHORE_GIT_PR_BRANCH}} '
 agent:
   machine:
-    type: e1-standard-2
-    os_image: ubuntu2004
+    type: s1-default-type
 blocks:
   - name: Dummy block
     task:
